@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - View Cart</title>
+</head>
+<body>
+    <h1>购物车内容</h1>
+    <ul>
+        {% for item in cart %}
+            <li>
+                {{ item }}
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="item" value="{{ item }}">
+                    <button type="submit">删除</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">返回添加商品</a>
+</body>
+</html>

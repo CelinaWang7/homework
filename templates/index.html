@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Add Item</title>
+</head>
+<body>
+    <h1>购物车</h1>
+    <form method="POST">
+        <input type="text" name="item" placeholder="请输入商品" required>
+        <button type="submit">添加到购物车</button>
+    </form>
+    <a href="{{ url_for('cart') }}">查看购物车</a>
+</body>
+</html>
